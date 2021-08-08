@@ -1,0 +1,23 @@
+{
+  "steps": [
+    "init",
+    "drop_dup",
+    "recall",
+    "predict",
+    "info_show"
+  ],
+  "recall": {
+    "count": 100,
+    "strategy": {
+      "rating":{"weight":60},
+      "recent_interest": {"weight":20},
+      "hot": {"weight":20}
+    },
+    "model_path": "model/data/recall_best.pth"
+  },
+
+  "predict": {
+    "count": 8,
+    "model_path": "model/data/deepfm_best.pth"
+  }
+}
